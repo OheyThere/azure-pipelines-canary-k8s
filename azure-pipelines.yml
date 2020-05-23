@@ -10,7 +10,7 @@ pool:
   vmImage: Ubuntu-16.04
 
 variables:
-  imageName: harbor.aws-institut.de/test/azure-pipelines-canary-k8s:latest #oleawsi/azure-pipelines-canary-k8s
+  imageName: harbor.aws-institut.de/test/azure-pipelines-canary-k8s #oleawsi/azure-pipelines-canary-k8s
 
 steps:
 - task: Docker@2
