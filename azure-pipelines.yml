@@ -10,13 +10,13 @@ pool:
   vmImage: Ubuntu-16.04
 
 variables:
-  imageName: harbor.aws-institut.de/test/azure-pipelines-canary-k8s #oleawsi/azure-pipelines-canary-k8s
+  imageName: oleawsi/azure-pipelines-canary-k8s
 
 steps:
 - task: Docker@2
   displayName: Build and push image
   inputs:
-    containerRegistry: harbor #azure-pipelines-canary-k8s #replace with name of your Docker registry service connection
+    containerRegistry: azure-pipelines-canary-k8s #replace with name of your Docker registry service connection
     repository: $(imageName)
     command: buildAndPush
     Dockerfile: app/Dockerfile
